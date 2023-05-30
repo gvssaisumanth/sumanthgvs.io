@@ -1,4 +1,4 @@
-import React, { Suspense, useState, useEffect } from "react";
+import React, { Suspense, useState, useEffect, useRef } from "react";
 import { Canvas } from "@react-three/fiber";
 import {
   Decal,
@@ -35,8 +35,8 @@ const Ball = (props) => {
   );
 };
 
-const BallCanvas = ({ icon }) => {
-  return (
+const BallCanvas = ({ icon, inView }) => {
+  return inView ? (
     <Canvas frameloop="always" gl={{ preserveDrawingBuffer: true }}>
       <Suspense fallback={<Loader />}>
         <OrbitControls enableZoom={false} position0={0} />
@@ -44,7 +44,42 @@ const BallCanvas = ({ icon }) => {
       </Suspense>
       <Preload all />
     </Canvas>
+  ) : null;
+};
+
+const BallCanvasWithObserver = ({ icon }) => {
+  const [inView, setInView] = useState(false);
+  const ballCanvasRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setInView(true);
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (ballCanvasRef.current) {
+      observer.observe(ballCanvasRef.current);
+    }
+
+    return () => {
+      if (ballCanvasRef.current) {
+        observer.unobserve(ballCanvasRef.current);
+      }
+    };
+  }, []);
+
+  return (
+    <div ref={ballCanvasRef}>
+      <BallCanvas icon={icon} inView={inView} />
+    </div>
   );
 };
 
-export default BallCanvas;
+export default BallCanvasWithObserver;
