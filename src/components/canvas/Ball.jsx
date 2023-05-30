@@ -57,7 +57,8 @@ const BallCanvasWithObserver = ({ icon }) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setInView(true);
-            observer.unobserve(entry.target);
+          } else {
+            setInView(false);
           }
         });
       },
