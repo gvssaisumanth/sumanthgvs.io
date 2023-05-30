@@ -16,7 +16,9 @@ const Ball = (props) => {
     <Float speed={2.5} rotationIntensity={1} floatIntensity={2}>
       <ambientLight intensity={0.25} />
       <directionalLight position={[0, 0, 0.05]} />
-      <mesh castShadow receiveShadow scale={2.75}>
+      <mesh castShadow receiveShadow scale={2.0}>
+        {" "}
+        {/* Changed scale to make the ball smaller */}
         <icosahedronGeometry args={[1, 2]} />
         <meshStandardMaterial
           color="#400c55"
@@ -52,25 +54,27 @@ const BallCanvasWithObserver = ({ icon }) => {
   const ballCanvasRef = useRef(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setInView(true);
-          } else {
-            setInView(false);
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
+    let observer;
 
     if (ballCanvasRef.current) {
+      observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              setInView(true);
+            } else {
+              setInView(false);
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+
       observer.observe(ballCanvasRef.current);
     }
 
     return () => {
-      if (ballCanvasRef.current) {
+      if (ballCanvasRef.current && observer) {
         observer.unobserve(ballCanvasRef.current);
       }
     };
