@@ -1,5 +1,5 @@
 import bwmap from "./backgrounds/bw-map.jpeg";
-import bwpic from "../assets/backgrounds/bw-pic.jpeg";
+import bwpic from "./backgrounds/bw-pic.jpeg";
 import nairobi from "./backgrounds/nairobi.png";
 import whiteabstract from "./backgrounds/white-abstract.png";
 import worldmap from "./backgrounds/world-map.png";
