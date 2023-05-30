@@ -36,31 +36,14 @@ const Ball = (props) => {
 };
 
 const BallCanvas = ({ icon }) => {
-  // const [show, setShow] = useState(false);
-  // useEffect(() => {
-  //   let timer1 = setTimeout(() => setShow(true), delay * 1000);
-
-  //   // this will clear Timeout
-  //   // when component unmount like in willComponentUnmount
-  //   // and show will not change to true
-  //   return () => {
-  //     clearTimeout(timer1);
-  //   };
-  // }, [icon]);
-
-  // if (!show) {
-  //   return <Loader />;
-  // }
   return (
-    <>
-      <Canvas frameloop="always" gl={{ preserveDrawingBuffer: true }}>
-        <Suspense fallback={<Loader />}>
-          <OrbitControls enableZoom={false} position0={0} />
-          <Ball imgUrl={icon} />
-        </Suspense>
-        <Preload all />
-      </Canvas>
-    </>
+    <Canvas frameloop="always" gl={{ preserveDrawingBuffer: true }}>
+      <Suspense fallback={<Loader />}>
+        <OrbitControls enableZoom={false} position0={0} />
+        <Ball imgUrl={icon} />
+      </Suspense>
+      <Preload all />
+    </Canvas>
   );
 };
 

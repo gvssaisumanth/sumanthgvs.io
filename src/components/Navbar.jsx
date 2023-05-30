@@ -115,7 +115,7 @@ const Navbar = () => {
       <div
         className={
           isOpen
-            ? "mobile-menu justify-center items-center"
+            ? "mobile-menu"
             : "hidden mobile-menu"
         }
       >
