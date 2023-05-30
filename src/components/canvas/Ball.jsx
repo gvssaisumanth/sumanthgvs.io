@@ -49,9 +49,8 @@ const BallCanvas = ({ icon, inView }) => {
   ) : null;
 };
 
-const BallCanvasWithObserver = ({ icon, name }) => {
+const BallCanvasWithObserver = ({ icon }) => {
   const [inView, setInView] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
   const ballCanvasRef = useRef(null);
 
   useEffect(() => {
@@ -82,17 +81,7 @@ const BallCanvasWithObserver = ({ icon, name }) => {
   }, []);
 
   return (
-    <div
-      ref={ballCanvasRef}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-      className="relative"
-    >
-      {isHovered && (
-        <div className="absolute top-0">
-          <p className="text-white text-sm sm:text-base md:text-lg">{name}</p>
-        </div>
-      )}
+    <div ref={ballCanvasRef} className="relative">
       <BallCanvas icon={icon} inView={inView} />
     </div>
   );
