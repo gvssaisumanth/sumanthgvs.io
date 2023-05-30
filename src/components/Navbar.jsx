@@ -17,24 +17,24 @@ const Navbar = () => {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
-  // useEffect(() => {
-  //   const checkSize = () => {
-  //     // Set your desired threshold (in pixels) here.
-  //     // This example uses 768px as the threshold (typical breakpoint for tablet screens)
-  //     if (window.innerWidth > 768) {
-  //       setIsOpen(false);
-  //     }
-  //   };
+  useEffect(() => {
+    const checkSize = () => {
+      // Set your desired threshold (in pixels) here.
+      // This example uses 768px as the threshold (typical breakpoint for tablet screens)
+      if (window.innerWidth > 768) {
+        setIsOpen(false);
+      }
+    };
 
-  //   // Call checkSize initially to set the correct state when component mounts
-  //   checkSize();
+    // Call checkSize initially to set the correct state when component mounts
+    checkSize();
 
-  //   // Set up event listener
-  //   window.addEventListener("resize", checkSize);
+    // Set up event listener
+    window.addEventListener("resize", checkSize);
 
-  //   // Clean up event listener on component unmount
-  //   return () => window.removeEventListener("resize", checkSize);
-  // }, []);
+    // Clean up event listener on component unmount
+    return () => window.removeEventListener("resize", checkSize);
+  }, []);
 
   return (
     <nav
