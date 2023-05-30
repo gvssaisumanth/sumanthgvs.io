@@ -1,4 +1,4 @@
-import React, { Suspense, useState } from "react";
+import React, { Suspense, useState, useEffect } from "react";
 import { Canvas } from "@react-three/fiber";
 import {
   Decal,
@@ -36,6 +36,21 @@ const Ball = (props) => {
 };
 
 const BallCanvas = ({ icon }) => {
+  // const [show, setShow] = useState(false);
+  // useEffect(() => {
+  //   let timer1 = setTimeout(() => setShow(true), delay * 1000);
+
+  //   // this will clear Timeout
+  //   // when component unmount like in willComponentUnmount
+  //   // and show will not change to true
+  //   return () => {
+  //     clearTimeout(timer1);
+  //   };
+  // }, [icon]);
+
+  // if (!show) {
+  //   return <Loader />;
+  // }
   return (
     <>
       <Canvas frameloop="always" gl={{ preserveDrawingBuffer: true }}>
