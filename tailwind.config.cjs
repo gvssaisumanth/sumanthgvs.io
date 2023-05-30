@@ -80,5 +80,5 @@ export default {
     },
   },
 
-  plugins: [require("tailwindcss-dark-mode")()],
+  plugins: [require("tailwindcss-dark-mode")(), require("flowbite/plugin")],
 };
