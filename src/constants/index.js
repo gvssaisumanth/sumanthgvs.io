@@ -124,42 +124,31 @@ const technologies = [
 
 const experiences = [
   {
-    title: "Senior Full stack Developer",
+    title: "Senior Software Developer",
     company_name: "LTIMindTree",
     icon: LTI,
     iconBg: "#333333",
     date: "Aug 2021 - Aug 2022",
     description: [
+      "Proficiently architected and managed the SDLC, leveraging AWS CI/CD services such as AWS CodeCommit,CodeBuild, and CodeDeploy to automate deployment reducing the deployment time by 30%.",
+      "Leveraged Python and Node.js to craft REST APIs using Chalice, Flask, and Express.Enhanced system predictability, boosting data processing efficiency by 30 % and ensured seamless frontend - backend integration.",
+      "Utilized React, Redux and React-Router to build intuitive frontend interfaces for asset overview, alerts dashboard,and user management. Incorporated Chart.js and enhanced data visualization, increasing user engagement by 40%.",
+      "Implemented rigorous unit testing for Python, Node.js, and React applications, utilizing frameworks like pytest, Jest, and Mocha, to ensure robust and reliable software performance.",
+      "Integrated AWS Timestream and DynamoDB for time-series data capture and low-latency storage, increasing data accessibility by 50%. Utilized AWS Lambda for event-driven programming and established a continuous monitoring system using AWS CloudWatch and AWS X-Ray for anomaly detection.",
       "Developed a real time asset overview website leveraging React for effective data visualization using chart js, contributing to a 25% increase in user engagement.",
-      "Established CI/CD pipelines using AWS services and Nginx, enabling seamless deployment and monitoring of applications, complemented by comprehensive unit testing utilizing Jest achieving a 90% code coverage.",
-      "Implemented triggers using AWS Lambda for issuing real-time alerts and analyzing the cause, leading to a 30% improvement in response.",
     ],
   },
   {
-    title: "Full stack engineer",
+    title: "Software Developer",
     company_name: "LTIMindTree",
     icon: LTI,
     iconBg: "#333333",
-    date: "Dec 2021 - Aug 2021",
+    date: "Oct 2020 - Aug 2021",
     description: [
       "Designed and implemented mappings to facilitate the migration of customer data from legacy systems to Oracle using Informatica, ensuring a seamless transition with minimal downtime.",
       "Developed sophisticated data transformation logic for integrating data from multiple sources, improving data accuracy and ensuring consistency across all systems.",
       'Received the "Best Employee" award for creating efficient and effective solutions to migrate and analyze data, highlighting my commitment to delivering high-quality outcomes.',
       "Streamlined the data migration process, minimizing the risks associated with data loss and ensuring the integrity and reliability of the migrated data.",
-    ],
-  },
-
-  {
-    title: "Full stack engineer Trainee",
-    company_name: "LTIMindTree",
-    icon: LTI,
-    iconBg: "#333333",
-    date: "Oct 2020 - Dec 2021",
-    description: [
-      "Architected and developed a comprehensive vehicle insurance platform using Java Spring Boot for backend logic and Angular for a responsive frontend user interface, improving the overall user experience.",
-      "Integrated the platform with a robust payment gateway, enabling customers to effortlessly purchase and renew insurance policies online, contributing to a significant increase in sales.",
-      "Implemented role-based access control to provide varying levels of access to users, ensuring data security and compliance with privacy regulations.",
-      "Leveraged unit and integration testing tools to ensure the platform's robustness and reliability, resulting in a reduction of bugs and downtime.",
     ],
   },
 
@@ -170,10 +159,11 @@ const experiences = [
     iconBg: "#333333",
     date: "May 2022 - Oct 2022",
     description: [
-      "Developed dynamic user feed feature using React, optimizing content delivery and boosting user engagement by 20%. ",
-      "Strategically designed and implemented user management roles and permissions, enhancing system security and simplifying administrative tasks.",
-      "Integrated comprehensive maps and location-based services into the website, improving its usability and user satisfaction.",
-      "Carried out a significant code refactoring process that resulted in a 10% reduction in the codebase. This led to improved maintainability, easier feature additions, and a more efficient performance of the application.",
+      "Developed a comprehensive, full-stack solution for a prepaid smart metering system, designed to cater to a user base of 50 lakh (5 million) users using Python and Node.js to craft REST APIs.",
+      "Implemented message queuing with AWS SQS to buffer incoming data, ensuring system decoupling and asynchronous processing of high-volume meter readings.",
+      "Deployed containerized microservices via AWS Elastic Container Service (ECS) to abstract data processing and analytics tasks, enhancing the scalability and reliability of the system.",
+      "Leveraged AWS Lambda with AWS EventBridge for event-driven data processing, effectively orchestrating asynchronous transformations and computations based on predefined triggers and rules.",
+      "Employed complex data transformation and ETL (Extract, Transform, Load) processes to support the integration between the data layer and the React-based frontend, enabling real-time data visualization",
     ],
   },
 ];
