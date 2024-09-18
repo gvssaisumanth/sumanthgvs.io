@@ -15,6 +15,7 @@ import {
   nyeusi,
   LTI,
   buildTheWorld,
+  amazon,
   cloud,
   ML,
   fullstack,
@@ -123,6 +124,20 @@ const technologies = [
 ];
 
 const experiences = [
+  {
+    title: "Software Development Engineer Co-op",
+    company_name: "Amazon",
+    icon: amazon,
+    iconBg: "#333333",
+    date: "Jan 2024 - Aug 2024",
+    description: [
+      "Architected and launched a React based web application collaborating with product managers and UX designers that improved the configuration process of warehouse parts by 30% and 20% increase in project delivery speed",
+      "Actively maintained and enhanced the front-end library utilized by fellow developers at amazon, ensuring a 20% reduction in bugs and inconsistencies",
+      "Leveraged AWS Lambda and SageMaker to integrate generative AI features, resulting in a 15% improvement in application functionality and user engagement",
+      "Applied debouncing and throttling techniques to JavaScript event handlers to reduce excessive re-renders and improve UI smoothness, resulting in a more fluid user experience and reduced CPU usage by 25%",
+      "Implemented advanced techniques such as memoization lazy loading of components, and efficient state management, after profiling leading to a 25% improvement in load times and responsiveness.",
+    ],
+  },
   {
     title: "Senior Software Developer",
     company_name: "LTIMindTree",
