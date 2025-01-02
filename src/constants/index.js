@@ -22,6 +22,7 @@ import {
   python,
   java,
   sql,
+  cloudnative,
 } from "../assets";
 
 export const navLinks = [
@@ -143,7 +144,7 @@ const experiences = [
     company_name: "LTIMindTree",
     icon: LTI,
     iconBg: "#333333",
-    date: "Aug 2021 - Aug 2022",
+    date: "Aug 2020 - Aug 2022",
     description: [
       "Proficiently architected and managed the SDLC, leveraging AWS CI/CD services such as AWS CodeCommit,CodeBuild, and CodeDeploy to automate deployment reducing the deployment time by 30%.",
       "Leveraged Python and Node.js to craft REST APIs using Chalice, Flask, and Express.Enhanced system predictability, boosting data processing efficiency by 30 % and ensured seamless frontend - backend integration.",
@@ -158,7 +159,7 @@ const experiences = [
     company_name: "LTIMindTree",
     icon: LTI,
     iconBg: "#333333",
-    date: "Oct 2020 - Aug 2021",
+    date: "Sep 2019 - Aug 2020",
     description: [
       "Developed a comprehensive, full-stack solution for a prepaid smart metering system, designed to cater to a user base of 50 lakh (5 million) users using Python and Node.js to craft REST APIs.",
       "Implemented message queuing with AWS SQS to buffer incoming data, ensuring system decoupling and asynchronous processing of high-volume meter readings.",
@@ -173,7 +174,7 @@ const experiences = [
     company_name: "buildTheWorld",
     icon: buildTheWorld,
     iconBg: "#333333",
-    date: "Jan 2020 - Sep 2020",
+    date: "Jan 2019 - Sep 2019",
     description: [
       "Developed a user feed feature using React that improved user engagement by 20%",
       "Created user management roles and permissions to enhance security and streamline administrative tasks",
@@ -311,6 +312,33 @@ const projects = [
     ],
     image: nyeusi,
     repo: "https://github.com/gvssaisumanth/TravellingSalesman",
+    link: "",
+  },
+  {
+    id: "project-5",
+    name: "Cloud-Native Application Assignment Tracker",
+    description:
+      "Utilized Terraform for Infrastructure as Code to configure network infrastructure for Assignment tracker application",
+    tags: [
+      {
+        name: "Node.js, Express.js",
+        color: "pink-text-gradient",
+      },
+      {
+        name: " CI/CD,Packer",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "GCP, AWS Terraform",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Pulumi",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: cloudnative,
+    repo: "",
     link: "",
   },
 ];

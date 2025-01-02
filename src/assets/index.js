@@ -47,7 +47,7 @@ import math from "./projects/math-magicians.png";
 import movie from "./projects/movie-metro.png";
 import nyeusi from "./projects/nyeusi.png";
 import space from "./projects/space-hub.png";
-
+import cloudnative from "./projects/cloud-native.png"
 import sumanthLogo from "./backgrounds/logo-white.png";
 
 import cloud from "./icons/cloud.png";
@@ -105,4 +105,5 @@ export {
   java,
   sql,
   contactcard,
+  cloudnative,
 };
