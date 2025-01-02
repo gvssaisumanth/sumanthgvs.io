@@ -316,7 +316,7 @@ const projects = [
   },
   {
     id: "project-5",
-    name: "Cloud-Native Application Assignment Tracker",
+    name: "Cloud-Native Application",
     description:
       "Utilized Terraform for Infrastructure as Code to configure network infrastructure for Assignment tracker application",
     tags: [
